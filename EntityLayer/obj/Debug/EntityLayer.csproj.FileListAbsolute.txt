@@ -1,0 +1,49 @@
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Helpers.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Mvc.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Razor.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Helpers.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Mvc.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Razor.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Helpers.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Mvc.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Razor.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Helpers.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Mvc.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.Razor.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb

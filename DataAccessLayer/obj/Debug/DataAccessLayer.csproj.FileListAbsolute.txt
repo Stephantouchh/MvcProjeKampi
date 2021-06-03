@@ -1,0 +1,56 @@
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Mvc.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Razor.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Mvc.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Razor.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Initialw.resources
+C:\Users\Samet UCA\Source\Repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Mvc.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Razor.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Mvc.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.Razor.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Initialw.resources
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
