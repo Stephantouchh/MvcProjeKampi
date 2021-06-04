@@ -52,7 +52,7 @@
                             <input class="form-control" placeholder="Konu:">
                         </div>
                         <div class="form-group">
-                            <textarea id="compose-textarea" class="form-control" style="height: 300px"></textarea>
+                            <textarea id="compose-textarea" class="form-control" style="height:300px"></textarea>
                         </div>
                         <div class="form-group">
                             <div class="btn btn-default btn-file">
@@ -78,11 +78,6 @@
         </div>
         <!-- /.row -->
     </section>
-    <!-- /.content -->
-    <!-- /.content-wrapper -->
-    <!-- Control Sidebar -->
-    <!-- /.control-sidebar -->
-    <!-- ./wrapper -->
     <!-- jQuery -->
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
@@ -101,3 +96,21 @@
         })</script>
 </body>
 </html>
+
+
+
+<script>
+    $('#compose-textarea').summernote({       
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+</script>
