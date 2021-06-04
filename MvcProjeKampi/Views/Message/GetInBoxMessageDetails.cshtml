@@ -14,7 +14,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1>Gelen Mesaj Detayları</h1>
-                </div>                
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -38,7 +38,11 @@
                             <br />
                             <h6>
                                 Kime: @Html.DisplayFor(x => x.SenderMail)
-                                <span class="mailbox-read-time float-right">15 Şub. 2015 11:03</span>
+                                <span class="mailbox-read-time float-right">
+                                    <td>
+                                        @Convert.ToDateTime(item.dataakt).ToString("dd/MM/yyyy")
+                                    </td>
+                                </span>
                             </h6>
                         </div>
                         <!-- /.mailbox-read-info -->
