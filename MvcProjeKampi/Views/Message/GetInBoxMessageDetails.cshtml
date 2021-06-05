@@ -39,9 +39,7 @@
                             <h6>
                                 Kime: @Html.DisplayFor(x => x.SenderMail)
                                 <span class="mailbox-read-time float-right">
-                                    <td>
-                                        @Convert.ToDateTime(item.dataakt).ToString("dd/MM/yyyy")
-                                    </td>
+                                    @DateTime.Parse(Html.DisplayFor(x => x.MessageDate).ToString()).ToShortDateString()
                                 </span>
                             </h6>
                         </div>
