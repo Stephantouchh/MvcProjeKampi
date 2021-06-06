@@ -15,10 +15,10 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Heading
 
-        public HeadingManager hm = new HeadingManager(new EfHeadingDal());
-        public CategoryManager cm = new CategoryManager(new EfCategoryDal());
-        public WriterManager wm = new WriterManager(new EfWriterDal());
-        public HeadingValidator hv = new HeadingValidator();
+        HeadingManager hm = new HeadingManager(new EfHeadingDal());
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        WriterManager wm = new WriterManager(new EfWriterDal());
+        HeadingValidator hv = new HeadingValidator();
         public ActionResult Index()
         {
             var headingvalues = hm.GetList();
@@ -28,19 +28,19 @@ namespace MvcProjeKampi.Controllers
         public ActionResult AddHeading()
         {
             var valuecategory = (from x in cm.GetList()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.CategoryName,
-                                                      Value = x.CategoryID.ToString()
-                                                  }).ToList();
+                                 select new SelectListItem
+                                 {
+                                     Text = x.CategoryName,
+                                     Value = x.CategoryID.ToString()
+                                 }).ToList();
             ViewBag.vlc = valuecategory;
 
             var valuewriter = (from x in wm.GetList()
-                                                select new SelectListItem
-                                                {
-                                                    Text = x.WriterName + " " + x.WriterSurName,
-                                                    Value = x.WriterId.ToString()
-                                                }).ToList();
+                               select new SelectListItem
+                               {
+                                   Text = x.WriterName + " " + x.WriterSurName,
+                                   Value = x.WriterId.ToString()
+                               }).ToList();
             ViewBag.wlc = valuewriter;
             return View();
         }
@@ -71,11 +71,11 @@ namespace MvcProjeKampi.Controllers
         public ActionResult EditHeading(int id)
         {
             var valueCategory = (from x in cm.GetList()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.CategoryName,
-                                                      Value = x.CategoryID.ToString()
-                                                  }).ToList();
+                                 select new SelectListItem
+                                 {
+                                     Text = x.CategoryName,
+                                     Value = x.CategoryID.ToString()
+                                 }).ToList();
             ViewBag.vlc = valueCategory;
 
             var HeadingValue = hm.GetByID(id);

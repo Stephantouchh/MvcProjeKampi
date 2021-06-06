@@ -13,28 +13,28 @@ namespace MvcProjeKampi.Controllers
 {
     public class MessageController : Controller
     {
-        MessageManager cm = new MessageManager(new EfMessageDal());
+        MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator mv = new MessageValidator();
 
         // GET: Message
         public ActionResult Inbox()
         {
-            var messagelist = cm.GetListInbox();
+            var messagelist = mm.GetListInbox();
             return View(messagelist);
         }
         public ActionResult SendBox()
         {
-            var messagelist = cm.GetListSendBox();
+            var messagelist = mm.GetListSendBox();
             return View(messagelist);
         }
         public ActionResult GetMessageDetails(int id)
         {
-            var messagevalues = cm.GetByID(id);
+            var messagevalues = mm.GetByID(id);
             return View(messagevalues);
         }
         public ActionResult GetInBoxMessageDetails(int id)
         {
-            var inboxvalues = cm.GetByID(id);
+            var inboxvalues = mm.GetByID(id);
             return View(inboxvalues);
         }
 
@@ -46,18 +46,18 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
-            p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             ValidationResult results = mv.Validate(p);
             if (results.IsValid)
             {
-                cm.MessageAdd(p);
-                return RedirectToAction("Index");
+                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                mm.MessageAdd(p);
+                return RedirectToAction("SendBox");
             }
             else
             {
-                foreach (var error in results.Errors)
+                foreach (var item in results.Errors)
                 {
-                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
             return View();

@@ -52,5 +52,6 @@ C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Initialw.resources
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1_addallofthem.resources
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addimage_file.resources

@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Mesaj Detayları</h1>
+                    <h1>İletişim Sayfası Mesaj Detayları</h1>
                 </div>
                 <div class="col-sm-6">
                     @*<ol class="breadcrumb float-sm-right">
@@ -45,7 +45,11 @@
                             <br />
                             <h6>
                                 Kimden: @Html.DisplayFor(x => x.UserMail)
-                                <span class="mailbox-read-time float-right">15 Şub. 2015 11:03</span>
+                                <span class="mailbox-read-time float-right">
+                                    <small>
+                                        @Html.DisplayFor(x => x.ContactDate)     
+                                    </small>
+                                </span>
                             </h6>
                         </div>
                         <!-- /.mailbox-read-info -->

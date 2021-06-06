@@ -18,5 +18,6 @@ namespace DataAccessLayer.Concrete
         public virtual DbSet<Writer> Writers { get; set; }
         public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<About> Abouts { get; set; }
+        public virtual DbSet<ImageFile> ImageFiles { get; set; }
     }
 }
