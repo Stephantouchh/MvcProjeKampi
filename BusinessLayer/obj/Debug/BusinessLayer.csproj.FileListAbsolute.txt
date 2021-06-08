@@ -252,3 +252,15 @@ C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csp
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\DevExpress.Xpo.v19.2.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll

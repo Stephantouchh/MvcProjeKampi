@@ -15,6 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator mv = new MessageValidator();
+        DraftController draftController = new DraftController();
 
         // GET: Message
         public ActionResult Inbox()
@@ -43,21 +44,48 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult NewMessage(Message p)
+        [HttpPost, ValidateInput(false)]
+        public ActionResult NewMessage(Message p, string button)
         {
             ValidationResult results = mv.Validate(p);
-            if (results.IsValid)
+            if (button == "draft")
             {
-                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                mm.MessageAdd(p);
-                return RedirectToAction("SendBox");
-            }
-            else
-            {
-                foreach (var item in results.Errors)
+                results = mv.Validate(p);
+                if (results.IsValid)
                 {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    Draft draft = new Draft();
+                    draft.ReceiverMail = p.ReceiverMail;
+                    draft.Subject = p.Subject;
+                    draft.DraftContent = p.MessageContent;
+                    draft.DraftDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                    draftController.AddDraft(draft);
+                    return RedirectToAction("Draft", "Draft");
+                }
+                else
+                {
+                    foreach (var item in results.Errors)
+                    {
+                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    }
+                }
+            }
+
+            else if (button == "save")
+            {
+                results = mv.Validate(p);
+                if (results.IsValid)
+                {
+                    p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                    p.SenderMail = "nihat@gmail.com";
+                    mm.MessageAdd(p);
+                    return RedirectToAction("SendBox");
+                }
+                else
+                {
+                    foreach (var item in results.Errors)
+                    {
+                        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                    }
                 }
             }
             return View();

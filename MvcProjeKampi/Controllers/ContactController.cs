@@ -16,6 +16,7 @@ namespace MvcProjeKampi.Controllers
         Context _context = new Context();
         ContactManager cm = new ContactManager(new EfContactDal());
         ContactValidator cv = new ContactValidator();
+        DraftManager draftManager = new DraftManager(new EfDraftDal());
 
         public ActionResult Index()
         {
@@ -37,6 +38,9 @@ namespace MvcProjeKampi.Controllers
 
             var contact = _context.Contacts.Count().ToString();
             ViewBag.contact = contact;
+
+            var draft = _context.Drafts.Count().ToString();
+            ViewBag.draft = draft;     
 
             return PartialView();
         }

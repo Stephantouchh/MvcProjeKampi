@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,6 +57,7 @@
     <Compile Include="Abstract\ICategoryService.cs" />
     <Compile Include="Abstract\IContactService.cs" />
     <Compile Include="Abstract\IContentService.cs" />
+    <Compile Include="Abstract\IDraftService.cs" />
     <Compile Include="Abstract\IHeadingService.cs" />
     <Compile Include="Abstract\IImageFileService.cs" />
     <Compile Include="Abstract\IMessageService.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\ContactManager.cs" />
     <Compile Include="Concrete\ContentManager.cs" />
+    <Compile Include="Concrete\DraftManager.cs" />
     <Compile Include="Concrete\HeadingManager.cs" />
     <Compile Include="Concrete\ImageFileManager.cs" />
     <Compile Include="Concrete\MessageManager.cs" />

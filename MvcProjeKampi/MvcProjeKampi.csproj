@@ -136,6 +136,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\DraftController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
@@ -2360,6 +2361,8 @@
     <Content Include="Views\Message\NewMessage.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Draft\Draft.cshtml" />
+    <Content Include="Views\Draft\GetDraftDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
