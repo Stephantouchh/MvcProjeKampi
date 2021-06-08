@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202106081916421_migg_draftadd.Designer.cs">
       <DependentUpon>202106081916421_migg_draftadd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106082054011_migg_adminadd.cs" />
+    <Compile Include="Migrations\202106082054011_migg_adminadd.Designer.cs">
+      <DependentUpon>202106082054011_migg_adminadd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106081916421_migg_draftadd.resx">
       <DependentUpon>202106081916421_migg_draftadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106082054011_migg_adminadd.resx">
+      <DependentUpon>202106082054011_migg_adminadd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
