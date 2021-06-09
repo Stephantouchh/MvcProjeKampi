@@ -54,7 +54,7 @@
                         <!-- /.mailbox-read-info -->
                         <!-- /.mailbox-controls -->
                         <div class="mailbox-read-message">
-                            <p>@Html.DisplayFor(x => x.DraftContent)</p>
+                            @Html.Raw(Model.DraftContent)
                         </div>
                         <!-- /.mailbox-read-message -->
                     </div>
