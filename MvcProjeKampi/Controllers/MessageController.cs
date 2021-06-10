@@ -18,6 +18,7 @@ namespace MvcProjeKampi.Controllers
         DraftController draftController = new DraftController();
 
         // GET: Message
+        [Authorize]
         public ActionResult Inbox()
         {
             var messagelist = mm.GetListInbox();

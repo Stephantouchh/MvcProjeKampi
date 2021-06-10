@@ -149,6 +149,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\AdminRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE-3.0.4\build\config\postcss.config.js" />
@@ -2065,6 +2066,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="MY Skills\css\style.css" />
+    <Content Include="MY Skills\images\5.jpg" />
+    <Content Include="MY Skills\images\img1.jpg" />
+    <Content Include="MY Skills\images\sprite.png" />
+    <Content Include="MY Skills\index.html" />
+    <Content Include="MY Skills\js\bars.js" />
+    <Content Include="MY Skills\js\easyResponsiveTabs.js" />
+    <Content Include="MY Skills\js\jquery-1.11.1.min.js" />
+    <Content Include="MY Skills\js\jquery.circlechart.js" />
+    <Content Include="MY Skills\w3layouts-License.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />
