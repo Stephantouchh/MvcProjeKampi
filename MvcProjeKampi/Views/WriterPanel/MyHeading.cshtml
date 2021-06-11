@@ -1,16 +1,15 @@
 ﻿@using EntityLayer.Concrete
 @model List<Heading>
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "MyHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
-
-
 
 @{
     string color = "";
     string statusColor = "";
-    string headingStatus = "";
+    //string headingStatus = "";
     string checkStatus = "";
     string buttonStatusColor = "";
     string Image = "";
@@ -50,18 +49,18 @@
                 <table class="table table-striped projects">
                     <thead>
                         <tr>
-                            <th style="width: 1%">
-                                #
-                            </th>
+                            @*<th style="width: 1%">
+                                    #
+                                </th>*@
                             <th style="width: 15%">
                                 Başlık Adı
                             </th>
                             <th style="width: 11%" class="text-center">
                                 Yazar
                             </th>
-                            <th style="width: 8%" class="text-center">
-                                Durum
-                            </th>
+                            @*<th style="width: 8%" class="text-center">
+                                    Durum
+                                </th>*@
                             <th style="width: 8%" class="text-center">
                                 Kategori
                             </th>
@@ -132,14 +131,14 @@
                                 checkStatus = "Pasif Yap";
                             }
 
-                            if (@item.HeadingStatus)
-                            {
-                                headingStatus = "Aktif";
-                            }
-                            else
-                            {
-                                headingStatus = "Pasif";
-                            }
+                            //if (@item.HeadingStatus)
+                            //{
+                            //    headingStatus = "Aktif";
+                            //}
+                            //else
+                            //{
+                            //    headingStatus = "Pasif";
+                            //}
 
                             if (item.Writer.WriterImage == null)
                             {
@@ -150,9 +149,9 @@
                                 Image = item.Writer.WriterImage;
                             }
                             <tr>
-                                <td>
-                                    @item.HeadingID
-                                </td>
+                                @*<td>
+                                        @item.HeadingID
+                                    </td>*@
                                 <td>
                                     <a>
                                         @item.HeadingName
@@ -175,9 +174,9 @@
                                     </ul>
                                 </td>
 
-                                <td class="project-state">
-                                    <span class="@statusColor">@headingStatus</span>
-                                </td>
+                                @*<td class="project-state">
+                                        <span class="@statusColor">@headingStatus</span>
+                                    </td>*@
                                 <td class="project-state">
                                     <span class="@color"> @item.Category.CategoryName</span>
                                 </td>
@@ -187,12 +186,12 @@
                                         </i>
                                         Yazılar
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="/Heading/EditHeading/@item.HeadingID">
+                                    <a class="btn btn-info btn-sm" href="/WriterPanel/EditHeading/@item.HeadingID">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="@buttonStatusColor btn-sm" href="/Heading/DeleteHeading/@item.HeadingID">
+                                    <a class="@buttonStatusColor btn-sm" href="/WriterPanel/DeleteHeading/@item.HeadingID">
                                         <i class="fas fa-trash">
                                         </i>
                                         @checkStatus
@@ -204,7 +203,7 @@
                     </tbody>
                 </table>
             </div>
-            <a href="/Heading/AddHeading/" class="btn btn-outline-dark">Yeni Başlık Ekle</a>
+            <a href="/WriterPanel/NewHeading/" class="btn btn-outline-dark">Yeni Başlık Ekle</a>
         </div>
     </section>
 </body>

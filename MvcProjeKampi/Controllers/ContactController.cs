@@ -30,10 +30,10 @@ namespace MvcProjeKampi.Controllers
         }
         public PartialViewResult ContactSideBarPartial()
         {
-            var receiverMail = _context.Messages.Count(m => m.ReceiverMail == "nihat@gmail.com").ToString();
+            var receiverMail = _context.Messages.Count(m => m.ReceiverMail == "gizem@hotmail.com").ToString();
             ViewBag.receiverMail = receiverMail;
 
-            var senderMail = _context.Messages.Count(m => m.SenderMail == "nihat@gmail.com").ToString();
+            var senderMail = _context.Messages.Count(m => m.SenderMail == "gizem@hotmail.com").ToString();
             ViewBag.senderMail = senderMail;
 
             var contact = _context.Contacts.Count().ToString();
