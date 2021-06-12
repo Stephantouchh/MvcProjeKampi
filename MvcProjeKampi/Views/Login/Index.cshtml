@@ -1,110 +1,68 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Admin Giriş Sayfası</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="~/AdminLTE-3.0.4/LoginAdmin/images/icons/favicon.ico" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/css/util.css">
-    <link rel="stylesheet" type="text/css" href="~/AdminLTE-3.0.4/LoginAdmin/css/main.css">
-    <!--===============================================================================================-->
+    <title>Admin Giriş Paneli</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/login-form-19/css/style.css">
+
 </head>
 <body>
-
-    <div class="limiter">
-        <div class="container-login100" style="background-image: url('/AdminLTE-3.0.4/LoginAdmin/images/bg-01.jpg');">
-            <div class="wrap-login100">
-                @using (Html.BeginForm("Index", "Login", FormMethod.Post))
-                {
-                    <span class="login100-form-logo">
-                        <i class="zmdi zmdi-landscape"></i>
-                    </span>
-
-                    <span class="login100-form-title p-b-34 p-t-27">
-                        Admin Giriş Paneli
-                    </span>
-
-                    <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input class="input100" type="text" name="AdminUserName" placeholder="Kullanıcı Adı">
-                        @*<span class="focus-input100" data-placeholder="&#xf207;"></span>*@
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <input class="input100" type="password" name="AdminPassword" placeholder="Şifre">
-                        @*<span class="focus-input100" data-placeholder="&#xf191;"></span>*@
-                    </div>
-
-                    <div class="contact100-form-checkbox">
-                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                        <label class="label-checkbox100" for="ckb1">
-                            Beni Hatırla
-                        </label>
-                    </div>
-                    if (ViewBag.ErrorMessage != null)
-                    {
-                        <div class="text-center" style="margin-bottom:15px">
-                            <a class="text-gray-dark">
-                                @ViewBag.ErrorMessage
-                            </a>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Admin Girişi</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap py-5">
+                        <div class="img d-flex align-items-center justify-content-center" style="        background-image: url(/AdminLTE-3.0.4/login-form-19/images/bg.jpg);"></div>
+                        <h3 class="text-center mb-0">Hoş Geldİnİz!</h3>
+                        <p class="text-center">Lütfen bilgilerinizi kutucuklara giriniz...</p>
+                        @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+                                <input type="text" class="form-control" name="AdminUserName" placeholder="Kullanıcı Adınız:" required>
+                            </div>
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                                <input type="password" class="form-control" name="AdminPassword" placeholder="*****" required>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-100 text-md-right">
+                                    <a href="#">Şifremi Unuttum</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn form-control btn-primary rounded submit px-3">Giriş Yap</button>
+                            </div>
+                        }
+                        <div class="w-100 text-center mt-4 text">
+                            <a href="#">Ana Sayfaya Dön!</a>
                         </div>
-                    }
-                    <div class="container-login100-form-btn">
-                        <button type="submit" class="login100-form-btn">
-                            Giriş Yap
-                        </button>
                     </div>
-
-                    <div class="text-center p-t-90">
-                        <a class="txt1" href="#">
-                            Siteye Geri Dön
-                        </a>
-                    </div>
-                }
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <div id="dropDownSelect1"></div>
-
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/animsition/js/animsition.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/bootstrap/js/popper.js"></script>
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/daterangepicker/moment.min.js"></script>
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/daterangepicker/daterangepicker.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/vendor/countdowntime/countdowntime.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/AdminLTE-3.0.4/LoginAdmin/js/main.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/jquery.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/popper.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/bootstrap.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/main.js"></script>
 
 </body>
 </html>
