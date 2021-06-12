@@ -2629,6 +2629,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Register\" />
+    <Folder Include="Yetenek Kartı ekran alıntısı\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
