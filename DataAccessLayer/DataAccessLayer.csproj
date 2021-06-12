@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IAboutDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
@@ -88,6 +90,14 @@
     <Compile Include="Migrations\202106082054011_migg_adminadd.cs" />
     <Compile Include="Migrations\202106082054011_migg_adminadd.Designer.cs">
       <DependentUpon>202106082054011_migg_adminadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106122028471_migs_all.cs" />
+    <Compile Include="Migrations\202106122028471_migs_all.Designer.cs">
+      <DependentUpon>202106122028471_migs_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106122102249_migs_all_message.cs" />
+    <Compile Include="Migrations\202106122102249_migs_all_message.Designer.cs">
+      <DependentUpon>202106122102249_migs_all_message.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +124,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106082054011_migg_adminadd.resx">
       <DependentUpon>202106082054011_migg_adminadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106122028471_migs_all.resx">
+      <DependentUpon>202106122028471_migs_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106122102249_migs_all_message.resx">
+      <DependentUpon>202106122102249_migs_all_message.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

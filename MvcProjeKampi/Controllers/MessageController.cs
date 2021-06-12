@@ -91,5 +91,27 @@ namespace MvcProjeKampi.Controllers
             }
             return View();
         }
+        public ActionResult IsRead(int id)
+        {
+            var result = mm.GetByID(id);
+            if (result.IsRead == false)
+            {
+                result.IsRead = true;
+            }
+            mm.MessageUpdate(result);
+            return RedirectToAction("ReadMessage");
+        }
+
+        public ActionResult ReadMessage()
+        {
+            var readMessage = mm.GetList().Where(x => x.IsRead == true).ToList();
+            return View(readMessage);
+        }
+
+        public ActionResult UnReadMessage()
+        {
+            var unReadMessage = mm.GetListUnRead();
+            return View(unReadMessage);
+        }
     }
 }

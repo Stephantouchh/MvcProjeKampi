@@ -21,5 +21,7 @@ namespace DataAccessLayer.Concrete
         public virtual DbSet<ImageFile> ImageFiles { get; set; }
         public virtual DbSet<Draft> Drafts { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
+        public DbSet<TalentCard> TalentCards { get; set; }
+        public DbSet<TalentCardSkill> TalentCardSkills { get; set; }
     }
 }

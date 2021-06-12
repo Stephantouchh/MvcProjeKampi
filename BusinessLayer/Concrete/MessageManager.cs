@@ -23,6 +23,11 @@ namespace BusinessLayer.Concrete
             return _messageDal.Get(x => x.MessageID == id);
         }
 
+        public List<Message> GetList()
+        {
+            return _messageDal.List(x => x.ReceiverMail == "gizem@hotmail.com").Where(x => x.IsRead == true).ToList();
+        }
+
         public List<Message> GetListInbox()
         {
             return _messageDal.List(x => x.ReceiverMail == "gizem@hotmail.com");
@@ -30,6 +35,11 @@ namespace BusinessLayer.Concrete
         public List<Message> GetListSendBox()
         {
             return _messageDal.List(x => x.SenderMail == "gizem@hotmail.com");
+        }
+
+        public List<Message> GetListUnRead()
+        {
+            return _messageDal.List(x => x.ReceiverMail == "gizem@hotmail.com").Where(x => x.IsRead == false).ToList();
         }
 
         public void MessageAdd(Message message)
