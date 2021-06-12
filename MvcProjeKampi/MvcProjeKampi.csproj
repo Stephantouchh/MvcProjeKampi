@@ -2552,6 +2552,8 @@
     <Content Include="AdminLTE-3.0.4\LoginAdmin\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="AdminLTE-3.0.4\LoginAdmin\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="AdminLTE-3.0.4\LoginAdmin\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Yetenek Kartı ekran alıntısı\Screenshot_2.png" />
+    <Content Include="Yetenek Kartı ekran alıntısı\Screenshot_3.png" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2629,7 +2631,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Register\" />
-    <Folder Include="Yetenek Kartı ekran alıntısı\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
