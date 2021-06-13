@@ -159,6 +159,9 @@
   <ItemGroup>
     <Content Include="3_4 Ödev Resimleri\AdminGiris.png" />
     <Content Include="3_4 Ödev Resimleri\AuthorizeVeRole.png" />
+    <Content Include="3_4 Ödev Resimleri\GelenKutusu.png" />
+    <Content Include="3_4 Ödev Resimleri\Hakkımızda_Aktif_Pasif.png" />
+    <Content Include="3_4 Ödev Resimleri\LoginHashing.png" />
     <Content Include="3_4 Ödev Resimleri\RegisterHash.png" />
     <Content Include="AdminLTE-3.0.4\build\config\postcss.config.js" />
     <Content Include="AdminLTE-3.0.4\build\config\rollup.config.js" />
