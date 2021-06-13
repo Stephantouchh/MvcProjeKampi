@@ -162,7 +162,10 @@
     <Content Include="3_4 Ödev Resimleri\GelenKutusu.png" />
     <Content Include="3_4 Ödev Resimleri\Hakkımızda_Aktif_Pasif.png" />
     <Content Include="3_4 Ödev Resimleri\LoginHashing.png" />
+    <Content Include="3_4 Ödev Resimleri\OkunmamışMesajlar.png" />
+    <Content Include="3_4 Ödev Resimleri\OkunmuşMesajlar.png" />
     <Content Include="3_4 Ödev Resimleri\RegisterHash.png" />
+    <Content Include="3_4 Ödev Resimleri\VeriTabanı.png" />
     <Content Include="AdminLTE-3.0.4\build\config\postcss.config.js" />
     <Content Include="AdminLTE-3.0.4\build\config\rollup.config.js" />
     <Content Include="AdminLTE-3.0.4\build\js\AdminLTE.js" />
