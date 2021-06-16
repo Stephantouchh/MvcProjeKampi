@@ -101,6 +101,14 @@
     <Compile Include="Migrations\202106122102249_migs_all_message.Designer.cs">
       <DependentUpon>202106122102249_migs_all_message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106152112364_mig_writerrole.cs" />
+    <Compile Include="Migrations\202106152112364_mig_writerrole.Designer.cs">
+      <DependentUpon>202106152112364_mig_writerrole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106152137010_mig1_add_role.cs" />
+    <Compile Include="Migrations\202106152137010_mig1_add_role.Designer.cs">
+      <DependentUpon>202106152137010_mig1_add_role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -132,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106122102249_migs_all_message.resx">
       <DependentUpon>202106122102249_migs_all_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106152112364_mig_writerrole.resx">
+      <DependentUpon>202106152112364_mig_writerrole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106152137010_mig1_add_role.resx">
+      <DependentUpon>202106152137010_mig1_add_role.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

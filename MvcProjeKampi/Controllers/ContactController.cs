@@ -19,6 +19,7 @@ namespace MvcProjeKampi.Controllers
         MessageManager mm = new MessageManager(new EfMessageDal());
         DraftManager draftManager = new DraftManager(new EfDraftDal());
 
+      
         public ActionResult Index()
         {
             var contactvalues = cm.GetList();

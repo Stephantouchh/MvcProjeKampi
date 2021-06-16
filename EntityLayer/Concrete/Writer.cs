@@ -35,6 +35,9 @@ namespace EntityLayer.Concrete
 
         public bool WriterStatus { get; set; }
 
+        [StringLength(1)]
+        public string WriterRole { get; set; }
+
         public virtual ICollection<Heading> Headings { get; set; }
         public virtual ICollection<Content> Contents { get; set; }
     }
