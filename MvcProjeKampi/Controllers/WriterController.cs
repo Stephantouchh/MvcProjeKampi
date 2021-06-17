@@ -34,6 +34,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = writervalidator.Validate(p);
             if (results.IsValid)
             {
+                p.WriterRole = "A";
                 wm.WriterAdd(p);
                 return RedirectToAction("Index");
             }
