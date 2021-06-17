@@ -12,7 +12,7 @@ namespace MvcProjeKampi
     {
         protected void Application_Start()
         {
-            GlobalFilters.Filters.Add(new AuthorizeAttribute() { Roles = "A,B,C" });
+            GlobalFilters.Filters.Add(new AuthorizeAttribute() { Roles = "A" });
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
