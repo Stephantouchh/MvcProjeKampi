@@ -1,8 +1,7 @@
 ﻿@using EntityLayer.Concrete
 @model List<Heading>
-
 @{
-    ViewBag.Title = "MyHeading";
+    ViewBag.Title = "AllHeading";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
@@ -10,8 +9,8 @@
     string color = "";
     string statusColor = "";
     //string headingStatus = "";
-    string checkStatus = "";
-    string buttonStatusColor = "";
+    //string checkStatus = "";
+    //string buttonStatusColor = "";
     string Image = "";
 }
 
@@ -48,18 +47,17 @@
             <div class="card-body p-0">
                 <table class="table table-striped projects">
                     <thead>
-                        <tr>                           
+                        <tr>
                             <th style="width: 15%">
                                 Başlık Adı
                             </th>
                             <th style="width: 15%" class="text-center">
                                 Yazar
-                            </th>                          
+                            </th>
                             <th style="width: 15%" class="text-center">
                                 Kategori
                             </th>
-
-                            <th style="width: 20%">
+                            <th style="width: 15%">
                             </th>
                         </tr>
                     </thead>
@@ -102,37 +100,7 @@
                             else if (item.Category.CategoryID == 9)
                             {
                                 color = "badge bg-danger";
-                            }
-                            switch (item.HeadingStatus)
-                            {
-                                case true:
-                                    statusColor = "badge rounded-pill bg-success";
-                                    buttonStatusColor = "btn btn-danger";
-                                    break;
-                                case false:
-                                    statusColor = "badge rounded-pill bg-danger";
-                                    buttonStatusColor = "btn btn-success";
-                                    break;
-                            }
-
-                            if (item.HeadingStatus == false)
-                            {
-
-                                checkStatus = "Aktif Yap";
-                            }
-                            else
-                            {
-                                checkStatus = "Pasif Yap";
-                            }
-
-                            //if (@item.HeadingStatus)
-                            //{
-                            //    headingStatus = "Aktif";
-                            //}
-                            //else
-                            //{
-                            //    headingStatus = "Pasif";
-                            //}
+                            }                    
 
                             if (item.Writer.WriterImage == null)
                             {
@@ -143,9 +111,6 @@
                                 Image = item.Writer.WriterImage;
                             }
                             <tr>
-                                @*<td>
-                                        @item.HeadingID
-                                    </td>*@
                                 <td>
                                     <a>
                                         @item.HeadingName
@@ -167,37 +132,26 @@
                                         <li><a> @item.Writer.WriterName @item.Writer.WriterSurName </a>  </li>
                                     </ul>
                                 </td>
-
-                                @*<td class="project-state">
-                                        <span class="@statusColor">@headingStatus</span>
-                                    </td>*@
                                 <td class="project-state">
                                     <span class="@color"> @item.Category.CategoryName</span>
                                 </td>
                                 <td class="project-warning text-right">
-                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingID">
+                                    <a class="btn btn-primary btn-sm" href="/Default/Headings/@item.HeadingID">
                                         <i class="fas fa-folder">
                                         </i>
                                         Yazılar
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="/WriterPanel/EditHeading/@item.HeadingID">
+                                    <a class="btn btn-info btn-sm" href="/WriterPanelContent/AddContent/@item.HeadingID">
                                         <i class="fas fa-pencil-alt">
                                         </i>
-                                        Düzenle
-                                    </a>
-                                    <a class="@buttonStatusColor btn-sm" href="/WriterPanel/DeleteHeading/@item.HeadingID">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        @checkStatus
-                                    </a>
-
+                                       Bu Başlığa Yaz
+                                    </a>                                    
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
             </div>
-            <a href="/WriterPanel/NewHeading/" class="btn btn-outline-dark">Yeni Başlık Ekle</a>
         </div>
     </section>
 </body>
