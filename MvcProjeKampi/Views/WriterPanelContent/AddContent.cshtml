@@ -9,11 +9,12 @@
 @using (Html.BeginForm("AddContent", "WriterPanelContent", FormMethod.Post))
 {
     <div class="form-group">
-        <input type="hidden" name="HeadingID" value="@ViewBag.d" />     
+        <input type="hidden" name="HeadingID" value="@ViewBag.d" />
         @Html.Label("İçeriğinizi Giriniz!")
         @Html.TextAreaFor(x => x.ContentValue, 10, 30, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.ContentValue)
         <br />
         <button class="btn btn-outline-info">Kaydet</button>
     </div>
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
 }

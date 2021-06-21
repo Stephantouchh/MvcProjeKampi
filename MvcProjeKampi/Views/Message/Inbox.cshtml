@@ -84,13 +84,12 @@
                                         }
                                         if (item.IsRead == false)
                                         {
-                                            color = "btn btn-danger btn-sm";
+                                            color = "text-danger";
                                         }
                                         if (item.IsRead == true)
                                         {
-                                            color = "btn btn-info btn-sm";
+                                            color = "text-info"; //btn btn-danger
                                         }
-
                                         <tr>
                                             <td>
                                                 <div class="icheck-primary">
@@ -105,10 +104,9 @@
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date"> @(((DateTime)item.MessageDate).ToString("dd/MMM/yyyy"))</td>
-                                            <td>
+                                            <td>                                                
                                                 <a class="@color" href="#">
-                                                    <i class="fas fa-pencil-alt">
-                                                    </i>
+                                               
                                                     @message
                                                 </a>
                                             </td>
