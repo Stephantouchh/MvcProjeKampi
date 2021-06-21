@@ -69,7 +69,6 @@ namespace MvcProjeKampi.Controllers
                     }
                 }
             }
-
             else if (button == "save")
             {
                 results = mv.Validate(p);
