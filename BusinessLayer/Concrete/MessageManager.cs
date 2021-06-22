@@ -28,13 +28,13 @@ namespace BusinessLayer.Concrete
             return _messageDal.List(x => x.ReceiverMail == "gizem@hotmail.com").Where(x => x.IsRead == true).ToList();
         }
 
-        public List<Message> GetListInbox()
+        public List<Message> GetListInbox(string p)
         {
-            return _messageDal.List(x => x.ReceiverMail == "gizem@hotmail.com");
+            return _messageDal.List(x => x.ReceiverMail == p);
         }
-        public List<Message> GetListSendBox()
+        public List<Message> GetListSendBox(string p)
         {
-            return _messageDal.List(x => x.SenderMail == "gizem@hotmail.com");
+            return _messageDal.List(x => x.SenderMail == p);
         }
 
         public List<Message> GetListUnRead()

@@ -7,31 +7,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
+using FluentValidation.Results;
+using BusinessLayer.ValidationRules;
 
 namespace MvcProjeKampi.Controllers
 {
-    
+
     public class WriterPanelController : Controller
     {
-        HeadingManager hm = new HeadingManager(new EfHeadingDal());
-        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        HeadingManager headingmanager = new HeadingManager(new EfHeadingDal());
+        CategoryManager categorymanager = new CategoryManager(new EfCategoryDal());
+        WriterManager writermanager = new WriterManager(new EfWriterDal());
+
         Context c = new Context();
+
         // GET: WriterPanel
-        public ActionResult WriterProfile()
+
+        public ActionResult WriterProfile(int id = 0)
         {
+            string p = (string)Session["WriterMail"];
+            id = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
+            var writervalue = writermanager.GetByID(id);
             return View();
         }
+        [HttpPost]
+        public ActionResult WriterProfile(Writer p)
+        {
+            WriterValidator writervalidator = new WriterValidator();
+
+            ValidationResult results = writervalidator.Validate(p);
+            if (results.IsValid)
+            {
+                writermanager.WriterUpdate(p);
+                return RedirectToAction("AllHeading", "WriterPanel");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
         public ActionResult MyHeading(string p)
         {
             p = (string)Session["WriterMail"];
             var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
-            var contentvalues = hm.GetListByWriter(writeridinfo);
+            var contentvalues = headingmanager.GetListByWriter(writeridinfo);
             return View(contentvalues);
         }
         [HttpGet]
         public ActionResult NewHeading()
-        {         
-            var valuecategory = (from x in cm.GetList()
+        {
+            var valuecategory = (from x in categorymanager.GetList()
                                  select new SelectListItem
                                  {
                                      Text = x.CategoryName,
@@ -49,13 +81,13 @@ namespace MvcProjeKampi.Controllers
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = writeridinfo;
             p.HeadingStatus = true;
-            hm.HeadingAdd(p);
+            headingmanager.HeadingAdd(p);
             return RedirectToAction("MyHeading");
         }
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
-            var valueCategory = (from x in cm.GetList()
+            var valueCategory = (from x in categorymanager.GetList()
                                  select new SelectListItem
                                  {
                                      Text = x.CategoryName,
@@ -63,19 +95,19 @@ namespace MvcProjeKampi.Controllers
                                  }).ToList();
             ViewBag.vlc = valueCategory;
 
-            var HeadingValue = hm.GetByID(id);
+            var HeadingValue = headingmanager.GetByID(id);
             return View(HeadingValue);
         }
         [HttpPost]
         public ActionResult EditHeading(Heading p)
         {
-            hm.HeadingUpdate(p);
+            headingmanager.HeadingUpdate(p);
             return RedirectToAction("MyHeading");
         }
         public ActionResult DeleteHeading(int id)
         {
 
-            var result = hm.GetByID(id);
+            var result = headingmanager.GetByID(id);
 
             if (result.HeadingStatus == true)
             {
@@ -86,7 +118,7 @@ namespace MvcProjeKampi.Controllers
                 result.HeadingStatus = true;
             }
 
-            hm.HeadingDelete(result);
+            headingmanager.HeadingDelete(result);
             return RedirectToAction("MyHeading");
 
             //var headingvalue = hm.GetByID(id);
@@ -94,9 +126,9 @@ namespace MvcProjeKampi.Controllers
             //hm.HeadingDelete(headingvalue);
             //return RedirectToAction("Index");
         }
-        public ActionResult AllHeading()
+        public ActionResult AllHeading(int sayfa = 1)
         {
-            var headings = hm.GetList();
+            var headings = headingmanager.GetList().ToPagedList(sayfa, 8);
             return View(headings);
         }
     }

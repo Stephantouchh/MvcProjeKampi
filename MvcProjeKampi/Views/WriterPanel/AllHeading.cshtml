@@ -1,5 +1,8 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+
+@model PagedList.IPagedList<Heading>
 @{
     ViewBag.Title = "AllHeading";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
@@ -100,7 +103,7 @@
                             else if (item.Category.CategoryID == 9)
                             {
                                 color = "badge bg-danger";
-                            }                    
+                            }
 
                             if (item.Writer.WriterImage == null)
                             {
@@ -144,8 +147,8 @@
                                     <a class="btn btn-info btn-sm" href="/WriterPanelContent/AddContent/@item.HeadingID">
                                         <i class="fas fa-pencil-alt">
                                         </i>
-                                       Bu Başlığa Yaz
-                                    </a>                                    
+                                        Bu Başlığa Yaz
+                                    </a>
                                 </td>
                             </tr>
                         }
@@ -157,3 +160,8 @@
 </body>
 </html>
 <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("AllHeading", new { sayfa }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    {"page-link"}
+})

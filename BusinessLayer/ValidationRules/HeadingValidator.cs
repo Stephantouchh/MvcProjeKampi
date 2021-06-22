@@ -14,6 +14,7 @@ namespace BusinessLayer.ValidationRules
         {
             RuleFor(h => h.HeadingName).NotEmpty().WithMessage(" Başlık Adı kısmı boş olmamalı ");
             RuleFor(h => h.HeadingName).MinimumLength(3).WithMessage(" Başlık Adı en az 3 karakter olmalı");
+            RuleFor(h => h.HeadingName).MaximumLength(50).WithMessage(" Başlık Adı en fazla 50 karakter olmalı");
         }
     }
 }

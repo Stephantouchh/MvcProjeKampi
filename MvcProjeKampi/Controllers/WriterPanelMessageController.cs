@@ -15,29 +15,36 @@ namespace MvcProjeKampi.Controllers
     public class WriterPanelMessageController : Controller
     {
         // GET: WriterPanelMessage
-        MessageManager mm = new MessageManager(new EfMessageDal());
-        MessageValidator mv = new MessageValidator();
+        MessageManager messagemanager = new MessageManager(new EfMessageDal());
+        MessageValidator messagevalidator = new MessageValidator();
         DraftManager draftManager = new DraftManager(new EfDraftDal());
         DraftController draftController = new DraftController();
         Context _context = new Context();
 
         public ActionResult Inbox()
         {
-            var messagelist = mm.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var messagelist = messagemanager.GetListInbox(p);
             return View(messagelist);
         }
         public ActionResult SendBox()
         {
-            var messagelist = mm.GetListSendBox();
+            string p = (string)Session["WriterMail"];
+            var messagelist = messagemanager.GetListSendBox(p);
             return View(messagelist);
         }
         public PartialViewResult MessageListMenu()
         {
-            var receiverMail = _context.Messages.Count(m => m.ReceiverMail == "gizem@hotmail.com").ToString();
+
+            string p = (string)Session["WriterMail"];
+            var writeridinfo = _context.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
+
+
+            var receiverMail = _context.Messages.Count(m => m.ReceiverMail == p).ToString();
             ViewBag.receiverMail = receiverMail;
 
-            var senderMail = _context.Messages.Count(m => m.SenderMail == "gizem@hotmail.com").ToString();
-            ViewBag.senderMail = senderMail;            
+            var senderMail = _context.Messages.Count(m => m.SenderMail == p).ToString();
+            ViewBag.senderMail = senderMail;
 
             var draft = _context.Drafts.Count().ToString();
             ViewBag.draft = draft;
@@ -51,12 +58,12 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult GetSendBoxMessageDetails(int id)
         {
-            var messagevalues = mm.GetByID(id);
+            var messagevalues = messagemanager.GetByID(id);
             return View(messagevalues);
         }
         public ActionResult GetInBoxMessageDetails(int id)
         {
-            var inboxvalues = mm.GetByID(id);
+            var inboxvalues = messagemanager.GetByID(id);
             return View(inboxvalues);
         }
         [HttpGet]
@@ -67,10 +74,10 @@ namespace MvcProjeKampi.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult NewMessage(Message p, string button)
         {
-            ValidationResult results = mv.Validate(p);
+            ValidationResult results = messagevalidator.Validate(p);
             if (button == "draft")
             {
-                results = mv.Validate(p);
+                results = messagevalidator.Validate(p);
                 if (results.IsValid)
                 {
                     Draft draft = new Draft();
@@ -92,12 +99,13 @@ namespace MvcProjeKampi.Controllers
 
             else if (button == "save")
             {
-                results = mv.Validate(p);
+                string sender = (string)Session["WriterMail"];
+                results = messagevalidator.Validate(p);
                 if (results.IsValid)
                 {
                     p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    p.SenderMail = "gizem@hotmail.com";
-                    mm.MessageAdd(p);
+                    p.SenderMail = sender;
+                    messagemanager.MessageAdd(p);
                     return RedirectToAction("SendBox");
                 }
                 else

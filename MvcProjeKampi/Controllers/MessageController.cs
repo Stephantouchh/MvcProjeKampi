@@ -20,12 +20,14 @@ namespace MvcProjeKampi.Controllers
         // GET: Message
         public ActionResult Inbox()
         {
-            var messagelist = mm.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var messagelist = mm.GetListInbox(p);
             return View(messagelist);
         }
         public ActionResult SendBox()
         {
-            var messagelist = mm.GetListSendBox();
+            string p = (string)Session["WriterMail"];
+            var messagelist = mm.GetListSendBox(p);
             return View(messagelist);
         }
         public ActionResult GetMessageDetails(int id)
@@ -71,11 +73,12 @@ namespace MvcProjeKampi.Controllers
             }
             else if (button == "save")
             {
+                string sender = (string)Session["WriterMail"];
                 results = mv.Validate(p);
                 if (results.IsValid)
                 {
                     p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                    p.SenderMail = "nihat@gmail.com";
+                    p.SenderMail = sender;
                     mm.MessageAdd(p);
                     return RedirectToAction("SendBox");
                 }

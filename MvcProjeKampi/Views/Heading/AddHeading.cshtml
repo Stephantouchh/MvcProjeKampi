@@ -15,9 +15,11 @@
         <br />
         @Html.Label("Kategori Giriniz")
         @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.CategoryID)
         <br />
         @Html.Label("Yazar Adı Giriniz")
         @Html.DropDownListFor(x => x.WriterID, (List<SelectListItem>)ViewBag.wlc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.WriterID)
         <br />
         <button class="btn btn-outline-info">Başlığı Oluştur</button>
     </div>

@@ -378,3 +378,7 @@ C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csp
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.pdb
+C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.dll
+C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.dll
+C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.xml
+C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.xml
