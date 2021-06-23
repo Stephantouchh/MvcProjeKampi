@@ -24,13 +24,13 @@ namespace MvcProjeKampi.Controllers
         Context c = new Context();
 
         // GET: WriterPanel
-
+        [HttpGet]
         public ActionResult WriterProfile(int id = 0)
         {
             string p = (string)Session["WriterMail"];
             id = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
             var writervalue = writermanager.GetByID(id);
-            return View();
+            return View(writervalue);
         }
         [HttpPost]
         public ActionResult WriterProfile(Writer p)
@@ -40,6 +40,8 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = writervalidator.Validate(p);
             if (results.IsValid)
             {
+                p.WriterStatus = true;
+                p.WriterRole = "A";
                 writermanager.WriterUpdate(p);
                 return RedirectToAction("AllHeading", "WriterPanel");
             }

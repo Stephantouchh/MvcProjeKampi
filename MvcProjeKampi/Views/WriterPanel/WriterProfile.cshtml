@@ -3,14 +3,13 @@
     ViewBag.Title = "WriterProfile";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
-<h2>Profilinizi Düzenleyin</h2>
+
+<h2>Profilinizi Düzenleyin!</h2>
 <br />
 @using (Html.BeginForm("WriterProfile", "WriterPanel", FormMethod.Post))
 {
     <div class="form-group">
-        @*@Html.Label("Yazar ID")*@
         @Html.HiddenFor(x => x.WriterId, new { @class = "form-control" })
-        <br />
         @Html.Label("Yazar Adı")
         @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.WriterName)
@@ -39,7 +38,7 @@
         @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.WriterAbout)
         <br />
-        <button class="btn btn-outline-success">Değişiklikleri Uygula!</button>
+        <button class="btn btn-outline-success">Yazar Bilgilerini Güncelle</button>
     </div>
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
 }
