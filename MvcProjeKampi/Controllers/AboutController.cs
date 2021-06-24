@@ -12,11 +12,11 @@ namespace MvcProjeKampi.Controllers
     public class AboutController : Controller
     {
 
-        AboutManager abm = new AboutManager(new EfAboutDal());
+        AboutManager aboutmanager = new AboutManager(new EfAboutDal());
         // GET: About
         public ActionResult Index()
         {
-            var aboutvalues = abm.GetList();
+            var aboutvalues = aboutmanager.GetList();
             return View(aboutvalues);
         }
         [HttpGet]
@@ -27,7 +27,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddAbout(About p)
         {
-            abm.AboutAdd(p);
+            aboutmanager.AboutAdd(p);
             return RedirectToAction("Index");
         }
         public PartialViewResult AboutPartial()
@@ -36,7 +36,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult AktifveyaPasifDurum(int id)
         {
-            var aboutValue = abm.GetByID(id);
+            var aboutValue = aboutmanager.GetByID(id);
 
             if (aboutValue.AboutStatus == true)
             {
@@ -46,7 +46,7 @@ namespace MvcProjeKampi.Controllers
             {
                 aboutValue.AboutStatus = true;
             }
-            abm.AboutUpdate(aboutValue);
+            aboutmanager.AboutUpdate(aboutValue);
             return RedirectToAction("Index");
         }
     }

@@ -12,7 +12,7 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Content
 
-        ContentManager cm = new ContentManager(new EfContentDal());
+        ContentManager contentmanager = new ContentManager(new EfContentDal());
 
         public ActionResult Index()
         {
@@ -20,7 +20,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult ContentByHeading(int id)
         {
-            var contentvalues = cm.GetListByHeadingID(id);
+            var contentvalues = contentmanager.GetListByHeadingID(id);
             return View(contentvalues);
         }
     }

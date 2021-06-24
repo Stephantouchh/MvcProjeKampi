@@ -12,17 +12,17 @@ namespace MvcProjeKampi.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        HeadingManager hm = new HeadingManager(new EfHeadingDal());
-        ContentManager cm = new ContentManager(new EfContentDal());
+        HeadingManager headingmanager = new HeadingManager(new EfHeadingDal());
+        ContentManager contentmanager = new ContentManager(new EfContentDal());
         public ActionResult Headings()
         {
-            var headinglist = hm.GetList();
+            var headinglist = headingmanager.GetList();
             return View(headinglist);
         }
 
         public PartialViewResult Index(int id = 4)
         {
-            var contentlist = cm.GetListByHeadingID(id);
+            var contentlist = contentmanager.GetListByHeadingID(id);
             return PartialView(contentlist);
         }
     }

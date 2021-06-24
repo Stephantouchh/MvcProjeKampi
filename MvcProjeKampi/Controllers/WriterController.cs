@@ -13,13 +13,13 @@ namespace MvcProjeKampi.Controllers
 {
     public class WriterController : Controller
     {
-        WriterManager wm = new WriterManager(new EfWriterDal());
+        WriterManager writermanager = new WriterManager(new EfWriterDal());
         WriterValidator writervalidator = new WriterValidator();
 
         // GET: Writer
         public ActionResult Index()
         {
-            var Writervalues = wm.GetList();
+            var Writervalues = writermanager.GetList();
             return View(Writervalues);
         }
         [HttpGet]
@@ -35,7 +35,7 @@ namespace MvcProjeKampi.Controllers
             if (results.IsValid)
             {
                 p.WriterRole = "A";
-                wm.WriterAdd(p);
+                writermanager.WriterAdd(p);
                 return RedirectToAction("Index");
             }
             else
@@ -50,7 +50,7 @@ namespace MvcProjeKampi.Controllers
         [HttpGet]
         public ActionResult EditWriter(int id)
         {
-            var wrietrvalue = wm.GetByID(id);
+            var wrietrvalue = writermanager.GetByID(id);
             return View(wrietrvalue);
         }
         [HttpPost]
@@ -59,7 +59,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = writervalidator.Validate(p);
             if (results.IsValid)
             {
-                wm.WriterUpdate(p);
+                writermanager.WriterUpdate(p);
                 return RedirectToAction("Index");
             }
             else

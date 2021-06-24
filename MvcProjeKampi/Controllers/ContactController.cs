@@ -14,20 +14,19 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Contact
         Context _context = new Context();
-        ContactManager cm = new ContactManager(new EfContactDal());
-        ContactValidator cv = new ContactValidator();
-        MessageManager mm = new MessageManager(new EfMessageDal());
+        ContactManager contactmanager = new ContactManager(new EfContactDal());        
+        MessageManager messagemanager = new MessageManager(new EfMessageDal());
         DraftManager draftManager = new DraftManager(new EfDraftDal());
 
       
         public ActionResult Index()
         {
-            var contactvalues = cm.GetList();
+            var contactvalues = contactmanager.GetList();
             return View(contactvalues);
         }
         public ActionResult GetContactDetails(int id)
         {
-            var contactvalues = cm.GetByID(id);
+            var contactvalues = contactmanager.GetByID(id);
             return View(contactvalues);
         }
         public PartialViewResult ContactSideBarPartial()
@@ -48,10 +47,10 @@ namespace MvcProjeKampi.Controllers
             var draft = _context.Drafts.Count().ToString();
             ViewBag.draft = draft;
 
-            var readMessage = mm.GetList().Count();
+            var readMessage = messagemanager.GetList().Count();
             ViewBag.readMessage = readMessage;
 
-            var unReadMessage = mm.GetListUnRead().Count();
+            var unReadMessage = messagemanager.GetListUnRead().Count();
             ViewBag.unReadMessage = unReadMessage;
 
             return PartialView();

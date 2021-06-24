@@ -13,31 +13,31 @@ namespace MvcProjeKampi.Controllers
 {
     public class MessageController : Controller
     {
-        MessageManager mm = new MessageManager(new EfMessageDal());
-        MessageValidator mv = new MessageValidator();
+        MessageManager messagemanager = new MessageManager(new EfMessageDal());
+        MessageValidator messagevalidator = new MessageValidator();
         DraftController draftController = new DraftController();
 
         // GET: Message
         public ActionResult Inbox()
         {
             string p = (string)Session["WriterMail"];
-            var messagelist = mm.GetListInbox(p);
+            var messagelist = messagemanager.GetListInbox(p);
             return View(messagelist);
         }
         public ActionResult SendBox()
         {
             string p = (string)Session["WriterMail"];
-            var messagelist = mm.GetListSendBox(p);
+            var messagelist = messagemanager.GetListSendBox(p);
             return View(messagelist);
         }
         public ActionResult GetMessageDetails(int id)
         {
-            var messagevalues = mm.GetByID(id);
+            var messagevalues = messagemanager.GetByID(id);
             return View(messagevalues);
         }
         public ActionResult GetInBoxMessageDetails(int id)
         {
-            var inboxvalues = mm.GetByID(id);
+            var inboxvalues = messagemanager.GetByID(id);
             return View(inboxvalues);
         }
 
@@ -49,10 +49,10 @@ namespace MvcProjeKampi.Controllers
         [HttpPost, ValidateInput(false)]
         public ActionResult NewMessage(Message p, string button)
         {
-            ValidationResult results = mv.Validate(p);
+            ValidationResult results = messagevalidator.Validate(p);
             if (button == "draft")
             {
-                results = mv.Validate(p);
+                results = messagevalidator.Validate(p);
                 if (results.IsValid)
                 {
                     Draft draft = new Draft();
@@ -74,12 +74,12 @@ namespace MvcProjeKampi.Controllers
             else if (button == "save")
             {
                 string sender = (string)Session["WriterMail"];
-                results = mv.Validate(p);
+                results = messagevalidator.Validate(p);
                 if (results.IsValid)
                 {
                     p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                     p.SenderMail = sender;
-                    mm.MessageAdd(p);
+                    messagemanager.MessageAdd(p);
                     return RedirectToAction("SendBox");
                 }
                 else
@@ -94,24 +94,24 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult IsRead(int id)
         {
-            var result = mm.GetByID(id);
+            var result = messagemanager.GetByID(id);
             if (result.IsRead == false)
             {
                 result.IsRead = true;
             }
-            mm.MessageUpdate(result);
+            messagemanager.MessageUpdate(result);
             return RedirectToAction("ReadMessage");
         }
 
         public ActionResult ReadMessage()
         {
-            var readMessage = mm.GetList().Where(x => x.IsRead == true).ToList();
+            var readMessage = messagemanager.GetList().Where(x => x.IsRead == true).ToList();
             return View(readMessage);
         }
 
         public ActionResult UnReadMessage()
         {
-            var unReadMessage = mm.GetListUnRead();
+            var unReadMessage = messagemanager.GetListUnRead();
             return View(unReadMessage);
         }
     }

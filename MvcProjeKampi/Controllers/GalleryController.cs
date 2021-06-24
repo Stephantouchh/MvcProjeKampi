@@ -10,11 +10,11 @@ namespace MvcProjeKampi.Controllers
 {
     public class GalleryController : Controller
     {
-         ImageFileManager ifm = new ImageFileManager(new EfImageFileDal());
+         ImageFileManager imagefilemanager = new ImageFileManager(new EfImageFileDal());
         // GET: Gallery
         public ActionResult Index()
         {
-            var values = ifm.GetList();
+            var values = imagefilemanager.GetList();
             return View(values);
         }
     }

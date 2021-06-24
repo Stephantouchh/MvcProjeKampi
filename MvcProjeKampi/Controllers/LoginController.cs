@@ -19,6 +19,7 @@ namespace MvcProjeKampi.Controllers
     public class LoginController : Controller
     {
         WriterLoginManager writerloginmanager = new WriterLoginManager(new EfWriterDal());
+        AdminLoginManager adminloginmanager = new AdminLoginManager(new EfAdminDal());
         // GET: Login
         [HttpGet]
         public ActionResult Index()
@@ -33,8 +34,10 @@ namespace MvcProjeKampi.Controllers
             string result = Convert.ToBase64String(sha1.ComputeHash(Encoding.UTF8.GetBytes(password)));
             p.AdminPassword = result;
 
-            Context c = new Context();
-            var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
+            //Context c = new Context();
+            //var adminuserinfo = c.Admins.FirstOrDefault(x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
+            var adminuserinfo = adminloginmanager.GetAdmin(p.AdminUserName, p.AdminPassword);
+
             if (adminuserinfo != null)
             {
                 FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);

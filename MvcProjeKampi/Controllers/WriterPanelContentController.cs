@@ -12,14 +12,14 @@ namespace MvcProjeKampi.Controllers
 {
     public class WriterPanelContentController : Controller
     {
-        ContentManager cm = new ContentManager(new EfContentDal());
-        Context c = new Context();
+        ContentManager contentmanager = new ContentManager(new EfContentDal());
+        Context _context = new Context();
         // GET: WriterPanelContent
         public ActionResult MyContent(string p)
         {
             p = (string)Session["WriterMail"];
-            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
-            var contentvalues = cm.GetListByWriter(writeridinfo);
+            var writeridinfo = _context.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterId).FirstOrDefault();
+            var contentvalues = contentmanager.GetListByWriter(writeridinfo);
             return View(contentvalues);
         }
         [HttpGet]
@@ -32,11 +32,11 @@ namespace MvcProjeKampi.Controllers
         public ActionResult AddContent(Content p)
         {
             string mail = (string)Session["WriterMail"];
-            var writeridinfo = c.Writers.Where(x => x.WriterMail == mail).Select(y => y.WriterId).FirstOrDefault();
+            var writeridinfo = _context.Writers.Where(x => x.WriterMail == mail).Select(y => y.WriterId).FirstOrDefault();
             p.ContentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = writeridinfo;
             p.ContentStatus = true;
-            cm.ContentAdd(p);
+            contentmanager.ContentAdd(p);
             return RedirectToAction("MyContent");
         }
         public ActionResult ToDoList()

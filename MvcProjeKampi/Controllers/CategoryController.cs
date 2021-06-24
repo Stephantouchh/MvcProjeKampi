@@ -15,7 +15,7 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Category
 
-        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        CategoryManager categorymanager = new CategoryManager(new EfCategoryDal());
 
 
         public ActionResult Index()
@@ -24,7 +24,7 @@ namespace MvcProjeKampi.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetList();
+            var categoryvalues = categorymanager.GetList();
             return View(categoryvalues);
         }
         [HttpGet]
@@ -41,7 +41,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = categoryValidator.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAdd(p);
+                categorymanager.CategoryAdd(p);
                 return RedirectToAction("GetCategoryList");
             }
             else

@@ -14,12 +14,12 @@ namespace MvcProjeKampi.Controllers
     public class AdminCategoryController : Controller
     {
         // GET: AdminCategory
-        CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        CategoryManager categorymanager = new CategoryManager(new EfCategoryDal());
 
 
         public ActionResult Index()
         {
-            var categoryvalues = cm.GetList();
+            var categoryvalues = categorymanager.GetList();
             return View(categoryvalues);
         }
         [HttpGet]
@@ -34,7 +34,7 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = categoryvalidator.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAdd(p);
+                categorymanager.CategoryAdd(p);
                 return RedirectToAction("Index");
             }
             else
@@ -49,20 +49,20 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult DeleteCategory(int id)
         {
-            var categoryvalue = cm.GetByID(id);
-            cm.CategoryDelete(categoryvalue);
+            var categoryvalue = categorymanager.GetByID(id);
+            categorymanager.CategoryDelete(categoryvalue);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult EditCategory(int id)
         {
-            var Categoryvalue = cm.GetByID(id);
+            var Categoryvalue = categorymanager.GetByID(id);
             return View(Categoryvalue);
         }
         [HttpPost]
         public ActionResult EditCategory(Category p)
         {
-            cm.CategoryUpdate(p);
+            categorymanager.CategoryUpdate(p);
             return RedirectToAction("Index");
         }
     }

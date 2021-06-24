@@ -15,19 +15,19 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Heading
 
-        HeadingManager hm = new HeadingManager(new EfHeadingDal());
-        CategoryManager cm = new CategoryManager(new EfCategoryDal());
-        WriterManager wm = new WriterManager(new EfWriterDal());
-        HeadingValidator hv = new HeadingValidator();
+        HeadingManager headingmanager = new HeadingManager(new EfHeadingDal());
+        CategoryManager categorymanager = new CategoryManager(new EfCategoryDal());
+        WriterManager writeramanager = new WriterManager(new EfWriterDal());
+        HeadingValidator headingvalidator = new HeadingValidator();
         public ActionResult Index()
         {
-            var headingvalues = hm.GetList();
+            var headingvalues = headingmanager.GetList();
             return View(headingvalues);
         }
         [HttpGet]
         public ActionResult AddHeading()
         {
-            var valuecategory = (from x in cm.GetList()
+            var valuecategory = (from x in categorymanager.GetList()
                                  select new SelectListItem
                                  {
                                      Text = x.CategoryName,
@@ -35,7 +35,7 @@ namespace MvcProjeKampi.Controllers
                                  }).ToList();
             ViewBag.vlc = valuecategory;
 
-            var valuewriter = (from x in wm.GetList()
+            var valuewriter = (from x in writeramanager.GetList()
                                select new SelectListItem
                                {
                                    Text = x.WriterName + " " + x.WriterSurName,
@@ -48,10 +48,10 @@ namespace MvcProjeKampi.Controllers
         public ActionResult AddHeading(Heading p)
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            ValidationResult results = hv.Validate(p);
+            ValidationResult results = headingvalidator.Validate(p);
             if (results.IsValid)
             {
-                hm.HeadingAdd(p);
+                headingmanager.HeadingAdd(p);
                 return RedirectToAction("Index");
             }
             else
@@ -70,7 +70,7 @@ namespace MvcProjeKampi.Controllers
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
-            var valueCategory = (from x in cm.GetList()
+            var valueCategory = (from x in categorymanager.GetList()
                                  select new SelectListItem
                                  {
                                      Text = x.CategoryName,
@@ -78,18 +78,18 @@ namespace MvcProjeKampi.Controllers
                                  }).ToList();
             ViewBag.vlc = valueCategory;
 
-            var HeadingValue = hm.GetByID(id);
+            var HeadingValue = headingmanager.GetByID(id);
             return View(HeadingValue);
         }
         [HttpPost]
         public ActionResult EditHeading(Heading p)
         {
 
-            ValidationResult validationResult = hv.Validate(p);
+            ValidationResult validationResult = headingvalidator.Validate(p);
             if (validationResult.IsValid)
             {
                 p.HeadingStatus = true;
-                hm.HeadingUpdate(p);
+                headingmanager.HeadingUpdate(p);
                 return RedirectToAction("Index");
             }
             else
@@ -107,7 +107,7 @@ namespace MvcProjeKampi.Controllers
         public ActionResult DeleteHeading(int id)
         {
 
-            var result = hm.GetByID(id);
+            var result = headingmanager.GetByID(id);
 
             if (result.HeadingStatus == true)
             {
@@ -118,7 +118,7 @@ namespace MvcProjeKampi.Controllers
                 result.HeadingStatus = true;
             }
 
-            hm.HeadingDelete(result);
+            headingmanager.HeadingDelete(result);
             return RedirectToAction("Index");
 
             //var headingvalue = hm.GetByID(id);
