@@ -18,7 +18,16 @@
         @Html.Label("Kategori Açıklaması")
         @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
         <br />
-        <button class="btn btn-outline-success">Güncelle</button>
+        <button class="btn btn-outline-success" id="btn1">Güncelle</button>
     </div>
     <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
+    <script>
+        $('#btn1').click(function () {
+            swal("Tebrikler!", "Ekleme işlemi başarılı bir şekilde gerçekleşti!", "success");
+        })
+    </script>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 }
