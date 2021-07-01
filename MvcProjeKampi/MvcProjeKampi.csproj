@@ -138,6 +138,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Charts\CategoryClass.cs" />
+    <Compile Include="Charts\HeadingChart.cs" />
+    <Compile Include="Charts\TalentChart.cs" />
+    <Compile Include="Charts\WriterChart.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AuthorizationController.cs" />
@@ -2960,6 +2963,10 @@
     <Content Include="Views\Heading\HeadingReport.cshtml" />
     <Content Include="Views\Test\SweetAlert.cshtml" />
     <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Chart\WriterColumnChart.cshtml" />
+    <Content Include="Views\Chart\TalentLineChart.cshtml" />
+    <Content Include="Views\Chart\CategoryPieChart.cshtml" />
+    <Content Include="Views\Chart\HeadingPieChart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

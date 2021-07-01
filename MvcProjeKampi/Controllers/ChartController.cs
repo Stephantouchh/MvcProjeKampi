@@ -1,4 +1,5 @@
-﻿using MvcProjeKampi.Charts;
+﻿using DataAccessLayer.Concrete;
+using MvcProjeKampi.Charts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,21 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
-        public ActionResult CategoryChart()
+        public ActionResult CategoryPieChart()
         {
-            return Json(BlogList(), JsonRequestBehavior.AllowGet);
+            return View();
+        }
+        public ActionResult HeadingPieChart()
+        {
+            return View();
+        }
+        public ActionResult WriterColumnChart()
+        {
+            return View();
+        }
+        public ActionResult TalentLineChart()
+        {
+            return View();
         }
         public List<CategoryClass> BlogList()
         {
@@ -43,5 +56,85 @@ namespace MvcProjeKampi.Controllers
             });
             return ct;
         }
+        public ActionResult CategoryChart()
+        {
+            return Json(BlogList(), JsonRequestBehavior.AllowGet);
+        }
+        public List<CategoryClass> CategoryList()
+        {
+            List<CategoryClass> categoryCharts = new List<CategoryClass>();
+            using (var context = new Context())
+            {
+                categoryCharts = context.Categories.Select(c => new CategoryClass
+                {
+                    CategoryName = c.CategoryName,
+                    CategoryCount = c.Headings.Count()
+                }).ToList();
+            }
+
+            return categoryCharts;
+        }
+
+        public ActionResult CategoryCharts()
+        {
+            return Json(CategoryList(), JsonRequestBehavior.AllowGet);
+        }
+
+        public List<WriterChart> WriterList()
+        {
+            List<WriterChart> writerCharts = new List<WriterChart>();
+            using (var context = new Context())
+            {
+                writerCharts = context.Writers.Select(c => new WriterChart
+                {
+                    WriterName = c.WriterName,
+                    WriterCount = c.Headings.Count()
+                }).ToList();
+            }
+
+            return writerCharts;
+        }
+
+        public ActionResult WriterChart()
+        {
+            return Json(WriterList(), JsonRequestBehavior.AllowGet);
+        }
+        public List<HeadingChart> HeadingList()
+        {
+            List<HeadingChart> headingCharts = new List<HeadingChart>();
+            using (var context = new Context())
+            {
+                headingCharts = context.Headings.Select(c => new HeadingChart
+                {
+                    HeadingName = c.HeadingName,
+                    ContentCount = c.Contents.Count()
+                }).ToList();
+            }
+
+            return headingCharts;
+        }
+        public ActionResult HeadingChart()
+        {
+            return Json(HeadingList(), JsonRequestBehavior.AllowGet);
+        }
+        //public List<TalentChart> TalentList()
+        //{
+        //    List<TalentChart> talentCharts = new List<TalentChart>();
+        //    using (var context = new Context())
+        //    {
+        //        talentCharts = context.TalentCards.Select(c => new TalentChart
+        //        {
+        //            TalentName = c.Name,
+        //            TalentRange = c.SkillPoint10
+        //        }).ToList();
+        //    }
+
+        //    return talentCharts;
+        //}
+
+        //public ActionResult TalentChart()
+        //{
+        //    return Json(TalentList(), JsonRequestBehavior.AllowGet);
+        //}
     }
 }
