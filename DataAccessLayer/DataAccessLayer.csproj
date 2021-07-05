@@ -60,6 +60,7 @@
     <Compile Include="Abstract\IImageFileDal.cs" />
     <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
     <Compile Include="Abstract\ITalentCardDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
     <Compile Include="EntityFramework\EfImageFileDal.cs" />
     <Compile Include="EntityFramework\EfMessageDal.cs" />
+    <Compile Include="EntityFramework\EfRoleDal.cs" />
     <Compile Include="EntityFramework\EfTalentCardDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202106061829424_mig1_addallofthem.cs" />
@@ -108,6 +110,14 @@
     <Compile Include="Migrations\202106152137010_mig1_add_role.cs" />
     <Compile Include="Migrations\202106152137010_mig1_add_role.Designer.cs">
       <DependentUpon>202106152137010_mig1_add_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107052038552_mig_addrole.cs" />
+    <Compile Include="Migrations\202107052038552_mig_addrole.Designer.cs">
+      <DependentUpon>202107052038552_mig_addrole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107052049032_mig_addrole1.cs" />
+    <Compile Include="Migrations\202107052049032_mig_addrole1.Designer.cs">
+      <DependentUpon>202107052049032_mig_addrole1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106152137010_mig1_add_role.resx">
       <DependentUpon>202106152137010_mig1_add_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107052038552_mig_addrole.resx">
+      <DependentUpon>202107052038552_mig_addrole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107052049032_mig_addrole1.resx">
+      <DependentUpon>202107052049032_mig_addrole1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

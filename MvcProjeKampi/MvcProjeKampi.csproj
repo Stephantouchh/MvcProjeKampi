@@ -2967,6 +2967,7 @@
     <Content Include="Views\Chart\TalentLineChart.cshtml" />
     <Content Include="Views\Chart\CategoryPieChart.cshtml" />
     <Content Include="Views\Chart\HeadingPieChart.cshtml" />
+    <Content Include="Views\Authorization\EditAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -23,10 +23,10 @@
         <tr>
             <th>@item.AdminID</th>
             <td>@item.AdminUserName</td>
-            <td>@item.AdminRole</td>
+            <td>@item.Role.RoleName</td>
             <td>Aktif</td>
             <td><a href="/AdminCategory//@item.AdminID" class="btn btn-danger">Pasif Yap</a></td>
-            <td><a href="/AdminCategory//@item.AdminID" class="btn btn-warning">Yetkisini Değiştir</a></td>
+            <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Yetkisini Değiştir</a></td>
             @*<td><a href="#" class="btn btn-primary">Başlık Detayları</a></td>*@
         </tr>
     }

@@ -61,3 +61,5 @@ C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migs_all_message.resources
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writerrole.resources
 C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1_add_role.resources
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addrole.resources
+C:\Users\by\source\repos\MvcProjeKampi\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_addrole1.resources

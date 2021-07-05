@@ -47,4 +47,3 @@ C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.
 C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.pdb
-C:\Users\by\source\repos\MvcProjeKampi\EntityLayer\obj\Debug\EntityLayer.csprojAssemblyReference.cache
