@@ -41,5 +41,10 @@ namespace MvcProjeKampi.Controllers
 
             return View(cardValues);
         }
+        public ActionResult Index2()
+        {
+            var result = talentCardManager.GetAll();
+            return View(result);
+        }
     }
 }

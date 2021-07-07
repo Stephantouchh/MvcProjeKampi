@@ -52,6 +52,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult AddHeading(Heading p)
         {
+            p.HeadingStatus = true;
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             ValidationResult results = headingvalidator.Validate(p);
             if (results.IsValid)

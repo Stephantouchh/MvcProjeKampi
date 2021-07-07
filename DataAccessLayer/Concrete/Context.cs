@@ -23,6 +23,6 @@ namespace DataAccessLayer.Concrete
         public virtual DbSet<Admin> Admins { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<TalentCard> TalentCards { get; set; }
-        public DbSet<TalentCardSkill> TalentCardSkills { get; set; }
+        public DbSet<Talent> Talents { get; set; }
     }
 }

@@ -62,6 +62,7 @@
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IRoleDal.cs" />
     <Compile Include="Abstract\ITalentCardDal.cs" />
+    <Compile Include="Abstract\ITalentDal.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfRoleDal.cs" />
     <Compile Include="EntityFramework\EfTalentCardDal.cs" />
+    <Compile Include="EntityFramework\EfTalentDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202106061829424_mig1_addallofthem.cs" />
     <Compile Include="Migrations\202106061829424_mig1_addallofthem.Designer.cs">
@@ -118,6 +120,14 @@
     <Compile Include="Migrations\202107052049032_mig_addrole1.cs" />
     <Compile Include="Migrations\202107052049032_mig_addrole1.Designer.cs">
       <DependentUpon>202107052049032_mig_addrole1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107070842458_mig_talent.cs" />
+    <Compile Include="Migrations\202107070842458_mig_talent.Designer.cs">
+      <DependentUpon>202107070842458_mig_talent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107070850543_mig_updatetalent.cs" />
+    <Compile Include="Migrations\202107070850543_mig_updatetalent.Designer.cs">
+      <DependentUpon>202107070850543_mig_updatetalent.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107052049032_mig_addrole1.resx">
       <DependentUpon>202107052049032_mig_addrole1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107070842458_mig_talent.resx">
+      <DependentUpon>202107070842458_mig_talent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107070850543_mig_updatetalent.resx">
+      <DependentUpon>202107070850543_mig_updatetalent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
