@@ -7,9 +7,13 @@ namespace MvcProjeKampi.Models1
 {
     public class Calender
     {
-        public string Title { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
-        public bool AllDay { get; set; }
+        public String title { get; set; }
+
+        public DateTime start { get; set; }
+
+        public DateTime end { get; set; }
+
+        public bool allDay { get; set; }
+
     }
 }

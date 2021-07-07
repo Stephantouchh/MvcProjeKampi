@@ -19,29 +19,30 @@ namespace MvcProjeKampi.Controllers
         {
             return View(new Calender());
         }
-        public JsonResult GetEvents(DateTime start, DateTime end)
-        {
-            var viewModel = new Calender();
-            var events = new List<Calender>();
-            start = DateTime.Today.AddDays(-14);
-            end = DateTime.Today.AddDays(-14);
+		public JsonResult GetEvents(DateTime start, DateTime end)
+		{
+			var viewModel = new Calender();
+			var events = new List<Calender>();
+			start = DateTime.Today.AddDays(-14);
+			end = DateTime.Today.AddDays(-14);
 
-            foreach (var item in headingmanager.GetList())
-            {
-                events.Add(new Calender()
-                {
-                    Title = item.HeadingName,
-                    Start = item.HeadingDate,
-                    End = item.HeadingDate.AddDays(-14),
-                    AllDay = false
-                });
+			foreach (var item in headingmanager.GetList())
+			{
+				events.Add(new Calender()
+				{
+					title = item.HeadingName,
+					start = item.HeadingDate,
+					end = item.HeadingDate.AddDays(-14),
+					allDay = false
+				});
 
-                start = start.AddDays(7);
-                end = end.AddDays(7);
-            }
+				start = start.AddDays(7);
+				end = end.AddDays(7);
+			}
 
 
-            return Json(events.ToArray(), JsonRequestBehavior.AllowGet);
-        }
-    }
+			return Json(events.ToArray(), JsonRequestBehavior.AllowGet);
+		}
+
+	}
 }

@@ -1,0 +1,167 @@
+﻿@using EntityLayer.Concrete
+@using PagedList
+@using PagedList.Mvc
+
+@model PagedList.IPagedList<Heading>
+@{
+    ViewBag.Title = "AllHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+@{
+    string color = "";
+    string statusColor = "";
+    //string headingStatus = "";
+    //string checkStatus = "";
+    //string buttonStatusColor = "";
+    string Image = "";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Başlık İşlemleri</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <br />
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%">
+                                Başlık Adı
+                            </th>
+                            <th style="width: 15%" class="text-center">
+                                Yazar
+                            </th>
+                            <th style="width: 15%" class="text-center">
+                                Kategori
+                            </th>
+                            <th style="width: 15%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            if (item.Category.CategoryID == 1)
+                            {
+                                color = "badge badge-warning";
+
+                            }
+                            else if (item.Category.CategoryID == 2)
+                            {
+                                color = "badge badge-success";
+                            }
+                            else if (item.Category.CategoryID == 3)
+                            {
+                                color = "badge badge-info";
+                            }
+                            else if (item.Category.CategoryID == 4)
+                            {
+                                color = "badge badge-secondary";
+                            }
+                            else if (item.Category.CategoryID == 5)
+                            {
+                                color = "badge badge-dark";
+                            }
+                            else if (item.Category.CategoryID == 6)
+                            {
+                                color = "badge badge-primary";
+                            }
+                            else if (item.Category.CategoryID == 7)
+                            {
+                                color = "badge badge-light";
+                            }
+                            else if (item.Category.CategoryID == 8)
+                            {
+                                color = "badge bg-teal";
+                            }
+                            else if (item.Category.CategoryID == 9)
+                            {
+                                color = "badge bg-danger";
+                            }
+
+                            if (item.Writer.WriterImage == null)
+                            {
+                                Image = "/Images/admin.jpg";
+                            }
+                            else
+                            {
+                                Image = item.Writer.WriterImage;
+                            }
+                            <tr>
+                                <td>
+                                    <a>
+                                        @item.HeadingName
+                                    </a>
+                                    <br />
+                                    <small>
+                                        @(((DateTime)item.HeadingDate).ToString("dd MMMM yyyy"))
+                                    </small>
+                                </td>
+                                <td class="text-center">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <img alt="Avatar"
+                                                 class="table-avatar"
+                                                 src="@Image">
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline badge rounded-pill bg-dark">
+                                        <li><a> @item.Writer.WriterName @item.Writer.WriterSurName </a>  </li>
+                                    </ul>
+                                </td>
+                                <td class="project-state">
+                                    <span class="@color"> @item.Category.CategoryName</span>
+                                </td>
+                                <td class="project-warning text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Default/Headings/@item.HeadingID">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        Yazılar
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="/WriterPanelContent/AddContent/@item.HeadingID">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Bu Başlığa Yaz
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("AllHeading", new { sayfa }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    {"page-link"}
+})

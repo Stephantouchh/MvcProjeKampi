@@ -1,0 +1,53 @@
+﻿@model EntityLayer.Concrete.Admin
+
+@{
+    ViewBag.Title = "EditAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Admin Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditAdmin", "Authorization", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.HiddenFor(c => c.AdminID, new { @class = "form-control" })
+        @Html.HiddenFor(c => c.AdminPassword, new { @class = "form-control" })
+        @Html.HiddenFor(c => c.AdminUserName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Admin Kullanıcı Adı")
+        @Html.TextBoxFor(c => c.AdminUserName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Rol")
+        @Html.DropDownListFor(c => c.RoleId, (List<SelectListItem>)ViewBag.valueadmin, new { @class = "form-control" })
+        <br />
+
+        <button class="btn btn-success">Güncelle</button>
+
+
+    </div>
+
+    @*<div class="form-group">
+            @Html.HiddenFor(x => x.AdminID, new { @class = "form-control" })
+            @Html.Label("Admin Kullanıcı Adı")
+            @Html.TextBoxFor(x => x.AdminUserName, new { @class = "form-control" })
+            <br />
+            @Html.Label("Admin Şifresi")
+            @Html.TextAreaFor(x => x.AdminPassword, new { @class = "form-control" })
+            <br />
+            @Html.Label("Admin Rolü")
+            @Html.DropDownListFor(x => x.AdminID, (List<SelectListItem>)ViewBag.adm, new { @class = "form-control" })
+            <br />
+            <button class="btn btn-outline-success" id="btn1">Güncelle</button>
+        </div>
+        <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+
+        <script>
+            $('#btn1').click(function () {
+                swal("Tebrikler!", "Ekleme işlemi başarılı bir şekilde gerçekleşti!", "success");
+            })
+        </script>
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>*@
+}

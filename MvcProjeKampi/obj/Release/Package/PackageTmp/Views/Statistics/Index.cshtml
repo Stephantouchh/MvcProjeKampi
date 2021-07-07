@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İstatistiklerimiz</h2>
+<br />
+<html>
+<head>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="small-box bg-black" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+                    <br />
+                    <span style="font-size:50px"> @ViewBag.ToplamKategoriSayısı </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-success" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Yazılım Kategorisi Başlık Sayısı</sup>
+                    <br />
+                    <span style="font-size:50px">@ViewBag.YazılımKategorisisBasNum </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-purple" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Yazar adında "a" harfi geçen Yazar sayısı</sup>
+                    <br />
+                    <span style="font-size:50px"> @ViewBag.ŞartlıYazarAdımız</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-red" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">En fazla başlığa sahip Kategori adı</sup>
+                    <br />
+                    <span style="font-size:50px"> @ViewBag.EnFazlaBaşlığımız </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-orange" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Durumu Aktif olan Kategorilerimiz</sup>
+                    <br />
+                    <span style="font-size:50px"> @ViewBag.AktifKategoriler </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+</body>
+</html>
