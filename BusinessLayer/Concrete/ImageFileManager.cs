@@ -22,5 +22,10 @@ namespace BusinessLayer.Concrete
         {
             return _imagefileDal.List();
         }
+
+        public void ImageAdd(ImageFile ımageFile)
+        {
+            _imagefileDal.Insert(ımageFile);
+        }
     }
 }
