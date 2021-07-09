@@ -35,7 +35,6 @@ namespace MvcProjeKampi.Controllers
             var result = talentManager.GetById(id);
             return View(result);
         }
-
         [HttpPost]
         public ActionResult EditTalent(Talent talent)
         {
@@ -48,6 +47,5 @@ namespace MvcProjeKampi.Controllers
             talentManager.Delete(result);
             return RedirectToAction("Index");
         }
-
     }
 }
