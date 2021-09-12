@@ -247,7 +247,6 @@ C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\System.Web.WebPag
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\System.Web.Razor.xml
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.dll
@@ -264,3 +263,4 @@ C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\de\DevExpress.Xpo
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
 C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\by\source\repos\MvcProjeKampi\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache

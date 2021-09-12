@@ -373,7 +373,6 @@ C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\System.Web.WebPages.Raz
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\Newtonsoft.Json.xml
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\Antlr3.Runtime.pdb
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csprojAssemblyReference.cache
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CoreCompileInputs.cache
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.CopyComplete
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.dll
@@ -382,3 +381,4 @@ C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.dll
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.dll
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.xml
 C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\bin\PagedList.Mvc.xml
+C:\Users\by\source\repos\MvcProjeKampi\MvcProjeKampi\obj\Debug\MvcProjeKampi.csproj.AssemblyReference.cache
