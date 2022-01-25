@@ -74,6 +74,7 @@ namespace MvcProjeKampi.Controllers
             //return RedirectToAction("Index");
         }
         [HttpGet]
+
         public ActionResult EditHeading(int id)
         {
             var valueCategory = (from x in categorymanager.GetList()
